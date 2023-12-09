@@ -1,6 +1,19 @@
 # Reverse Shell en Go
 
 Este es un programa simple de reverse shell escrito en Go que establece una conexión TCP y ejecuta comandos en una máquina remota. 
+Una Reverse Shell (o shell inversa) es una técnica utilizada en ciberseguridad y hacking que implica la conexión a una máquina remota y la ejecución de comandos desde esa máquina en la máquina local. En lugar de la típica comunicación directa desde el cliente al servidor, como en una shell normal, en una reverse shell, el cliente es el que inicia la conexión y el servidor la acepta.
+
+El flujo típico de una reverse shell es el siguiente:
+
+1.- Un atacante (o un programa malicioso) coloca un "payload" en la máquina de la víctima. Este payload podría ser un script, un ejecutable o cualquier tipo de código malicioso.
+
+2.- El payload se ejecuta en la máquina de la víctima, y en lugar de establecer una conexión saliente hacia el atacante, espera a que el atacante inicie la conexión.
+
+3.- El atacante utiliza su propia máquina como servidor y se conecta al payload que se está ejecutando en la máquina de la víctima.
+
+4.- Una vez establecida la conexión, el atacante obtiene acceso a una shell en la máquina de la víctima, lo que le permite ejecutar comandos y controlar el sistema remoto.
+
+La reverse shell es una técnica utilizada en situaciones donde los firewalls y otras medidas de seguridad bloquean las conexiones entrantes, pero permiten las conexiones salientes. Al invertir el flujo de comunicación, el atacante puede eludir algunas restricciones de seguridad.
 
 # Características
 
